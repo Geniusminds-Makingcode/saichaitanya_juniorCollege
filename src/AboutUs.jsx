@@ -208,7 +208,7 @@ const AboutUs = () => {
             About  Sai Chaitanya Junior College
           </h1>
           <p className="hero-subtitle" style={{ fontSize: '1.125rem', opacity: 0.9, textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>
-            Shaping Futures Since 2007• Excellence in Intermediate Education
+            Shaping Futures Since 2007 • Excellence in Intermediate Education
           </p>
         </div>
       </section>
