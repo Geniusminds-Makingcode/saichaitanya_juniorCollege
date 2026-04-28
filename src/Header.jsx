@@ -492,9 +492,33 @@ export default function Header() {
                 Admissions & Contact Us
               </button>
                <button
-                onClick={() => handleNavigation('https://educampus360.com/login')}
-                style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', fontSize: 'inherit', fontFamily: 'inherit' }}
-                className="nav-item"
+                onClick={() => window.open('https://educampus360.com/login', '_blank')}
+                style={{
+                  background: 'linear-gradient(135deg, #dc2626, #eb7932ff)',
+                  color: 'white',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '0.9rem',
+                  fontFamily: 'inherit',
+                  fontWeight: '600',
+                  padding: '0.6rem 1.5rem',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 6px -1px rgba(220, 38, 38, 0.4)',
+                  transition: 'all 0.3s ease',
+                  marginLeft: 'auto',
+                  marginRight: 'auto'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.transform = 'translateY(-2px)';
+                  e.target.style.boxShadow = '0 10px 15px -3px rgba(220, 38, 38, 0.5)';
+                  e.target.style.background = '#b91c1c';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = '0 4px 6px -1px rgba(220, 38, 38, 0.4)';
+                  e.target.style.background = '#dc2626';
+                }}
+                className="nav-item-cta"
               >
                 ERP Login
               </button>
