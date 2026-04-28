@@ -717,106 +717,49 @@ const AboutUs = () => {
               ...homePageStyles.headings,
               color: '#111827',
               fontSize: '2rem',
-              fontWeight: '700',
+              fontWeight: '610',
               marginBottom: '1rem'
             }}>
-              Student Testimonials
+              What Our Students Say
             </h2>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-              <span style={{ color: '#fbbf24', fontSize: '1.5rem' }}>★★★★★</span>
-              <span style={{ fontSize: '1.25rem', fontWeight: '600', color: '#111827' }}>4.8 Rating</span>
-              <span style={{ fontSize: '1rem', color: '#6b7280' }}>from 327 Google Reviews</span>
-            </div>
-            <p style={{ fontSize: '0.9rem', color: '#6b7280', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+            {/* <p style={{ fontSize: '0.9rem', color: '#6b7280', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
               Hear what our students and parents have to say about their experience at Sai Chaitanya Junior College
-            </p>
+            </p> */}
           </div>
 
-          <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-            {[
-              {
-                rating: '★★★★★',
-                content: 'Excellent faculty and disciplined environment. The college provides great academic support and personal attention to each student.',
-                author: 'Rahul Kumar',
-                type: 'Google Review'
-              },
-              {
-                rating: '★★★★★',
-                content: 'Great academic support and infrastructure. The teachers are very supportive and the study materials are comprehensive.',
-                author: 'Sneha Reddy',
-                type: 'Google Review'
-              },
-              {
-                rating: '★★★★★',
-                content: 'Best guidance for competitive exams. The college helped me crack my entrance exams with their excellent coaching.',
-                author: 'Kiran Kumar',
-                type: 'Google Review'
-              }
-            ].map((review, index) => (
-              <div key={index} style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                padding: '2rem',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                border: '2px solid rgba(220, 38, 38, 0.1)',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                height: '100%'
-              }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.15)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-                }}>
-                <div style={{
-                  fontSize: '1.25rem',
-                  color: '#fbbf24',
-                  marginBottom: '1rem',
-                  letterSpacing: '2px'
-                }}>
-                  {review.rating}
-                </div>
-
-                <p style={{
-                  color: '#374151',
-                  lineHeight: '1.7',
-                  fontSize: '0.95rem',
-                  marginBottom: '1.5rem',
-                  fontStyle: 'italic'
-                }}>
-                  "{review.content}"
-                </p>
-
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  paddingTop: '1rem',
-                  borderTop: '1px solid #e5e7eb'
-                }}>
-                  <h4 style={{
-                    fontSize: '0.95rem',
-                    fontWeight: '600',
-                    color: '#111827',
-                    margin: 0
-                  }}>
-                    - {review.author}
-                  </h4>
-                  <span style={{
-                    fontSize: '0.75rem',
-                    color: '#6b7280',
-                    backgroundColor: '#f3f4f6',
-                    padding: '0.25rem 0.75rem',
-                    borderRadius: '12px'
-                  }}>
-                    {review.type}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Elfsight Google Reviews Widget Container */}
+          <div style={{ 
+            margin: '2rem 0',
+            minHeight: '400px',
+            background: '#ffffff',
+            borderRadius: '12px',
+            padding: '2rem',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+            border: '2px solid rgba(220, 38, 38, 0.1)'
+          }}>
+            <style>
+              {`
+                .reviews-widget-wrapper {
+                  height: 480px;
+                  overflow: hidden;
+                  background: '#ffffff';
+                  border-radius: '8px';
+                }
+                
+                @media (max-width: 768px) {
+                  .reviews-widget-wrapper {
+                    height: 570px; /* Adjust height for mobile devices */
+                  }
+                }
+              `}
+            </style>
+            {/* Elfsight Google Reviews Widget */}
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div className="reviews-widget-wrapper">
+              <div className="elfsight-app-ae4a56f1-de2a-467f-94ce-b8b56350d0b2" data-elfsight-app-lazy></div>
+            </div>
+            
+                      </div>
 
           <div className="review-buttons" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
