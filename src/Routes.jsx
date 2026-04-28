@@ -6,7 +6,7 @@ import AboutUs from "./AboutUs";
 // import Announcements from "./Announcements";
 import Gallery from "./Gallery";
 import Academic from "./Academic";
-import ResultsAchievements from "./ResultsAchievements";
+import Resultsachievements from "./Resultsachievements";
 
 const AppRoutes = () => {
   return (
@@ -21,7 +21,7 @@ const AppRoutes = () => {
       />
       {/* <Route path="/admission" element={ <Layout><AdmissionForm /></Layout>} /> */}
       <Route path="/academics" element={<Layout><Academic /></Layout>} />
-      <Route path="/results" element={<Layout><ResultsAchievements /></Layout>} />
+      <Route path="/results" element={<Layout><Resultsachievements /></Layout>} />
       <Route path="/contact" element={<Layout><Contact /></Layout>} />
       <Route path="/about" element={<Layout><AboutUs /></Layout>} />
       {/* <Route path="/announcements" element={ <Layout><Announcements /></Layout>} /> */}
