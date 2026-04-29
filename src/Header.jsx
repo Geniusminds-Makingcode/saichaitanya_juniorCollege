@@ -102,7 +102,7 @@ export default function Header() {
         }}>
           {/* Left - Social Media Icons */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <a href="https://wa.me/8309440507" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', transition: 'opacity 0.3s ease' }}
+            <a href="https://wa.me/918309440507" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none', display: 'flex', alignItems: 'center', transition: 'opacity 0.3s ease' }}
               onMouseOver={(e) => e.target.style.opacity = '0.8'}
               onMouseOut={(e) => e.target.style.opacity = '1'}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -220,7 +220,7 @@ export default function Header() {
 
       {/* FLOATING WHATSAPP BUTTON - Bottom Right */}
       <a
-        href="https://wa.me/8309440507"
+        href="https://wa.me/918309440507"
         target="_blank"
         rel="noopener noreferrer"
         style={{
