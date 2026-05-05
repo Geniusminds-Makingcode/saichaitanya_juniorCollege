@@ -10,6 +10,7 @@ import image4 from "./assets/Heroic/image4.png";
 import image11 from "./assets/Heroic/image11.png";
 import image5 from "./assets/Heroic/image5.jpeg";
 import ceoImage from "./assets/Photos/AboutUs/ceo.png";
+import youtubeThumbnail from "./assets/Photos/AboutUs/yotuubethumbnail.png";
 import image10 from "./assets/Heroic/image10.png";
 import image611 from "./assets/Heroic/image611.png";
 import image100 from "./assets/Heroic/image100.png";
@@ -29,190 +30,104 @@ export default function HomePage() {
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
-
   const [successMessage, setSuccessMessage] = useState('');
-
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const [scrollY, setScrollY] = useState(0);
-
   const [statsAnimated, setStatsAnimated] = useState(false);
-
   const [statCounts, setStatCounts] = useState({ years: 19, students: 800, faculty: 35, success: 100 });
-
   const [tickerPosition, setTickerPosition] = useState(0);
-
+  const [showVideo, setShowVideo] = useState(false);
   const { isMobile, isTablet, isDesktop } = useResponsive();
-
-
-
   const slides = [
-
     {
-
       image: image100,
-
       title: "Premium Education",
-
       subtitle: "Excellence Redefined",
-
       description: "World-class education with premium facilities and experienced faculty",
-
       cta: "Explore Excellence",
-
       ctaLink: "/academics",
       badge: "Premium Quality"
     },
     {
-
       image: image4,
-
       title: "Empowering Students",
-
       subtitle: "A Community of Achievers",
-
       description: "Join a vibrant community of passionate learners and future leaders",
-
       cta: "View Achievements",
-
       ctaLink: "/results",
-
       badge: "Student Success"
-
     },
 
     {
-
       image: image10,
-
       title: "Sports Excellence",
-
       subtitle: "Champions in Making",
-
       description: "Comprehensive sports programs fostering physical fitness and team spirit",
-
       cta: "Sports Programs",
-
       ctaLink: "/academics",
-
       badge: "Sports Champions"
-
     },
 
     {
-
       image: image,
-
       title: "Excellence in Education",
-
       subtitle: "Building Future Leaders",
-
       description: "Comprehensive academic programs with focus on holistic development",
-
       cta: "Explore Programs",
-
       ctaLink: "/academics",
-
       badge: "Quality Education"
-
     },
 
     {
-
       image: image611,
-
       title: "Research & Innovation",
-
       subtitle: "Pushing Boundaries",
-
       description: "Encouraging scientific temper and research mindset among students",
-
       cta: "Research Initiatives",
-
       ctaLink: "/academics",
-
       badge: "Innovation Hub"
-
     },
-
     {
-
       image: image11,
-
       title: "Holistic Development",
-
       subtitle: "Beyond Just Academics",
-
       description: "Fostering overall growth through sports, cultural activities, and leadership programs",
-
       cta: "Explore Activities",
-
       ctaLink: "/academics",
-
       badge: "All-round Growth"
-
     }
-
   ];
 
 
 
   useEffect(() => {
-
     const slideInterval = setInterval(() => {
-
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-
     }, 5000);
-
     return () => clearInterval(slideInterval);
-
   }, [slides.length]);
 
 
-
   useEffect(() => {
-
     let ticking = false;
-
     const handleScroll = () => {
-
       if (!ticking) {
-
         requestAnimationFrame(() => {
-
           const statsSection = document.querySelector('.stats-strip');
-
           if (statsSection && !statsAnimated) {
-
             const rect = statsSection.getBoundingClientRect();
-
             if (rect.top < window.innerHeight && rect.bottom > 0) {
-
               setStatsAnimated(true);
-
               animateStats();
-
             }
-
           }
-
           ticking = false;
-
         });
-
         ticking = true;
-
       }
-
     };
-
-
-
     window.addEventListener('scroll', handleScroll, { passive: true });
-
     handleScroll();
-
 
 
     return () => window.removeEventListener('scroll', handleScroll);
@@ -444,91 +359,51 @@ export default function HomePage() {
 
   <div className="homepage-container">
     <SEO
-      title="Best Junior College in Madanapalle & Annamayya District | Sai Chaitanya Junior College"
+      title="Best Intermediate Junior College in Madanapalle & Annamayya District | Sai Chaitanya Junior College"
       description="Sai Chaitanya Junior College - Premium education in Madanapalle, Andhra Pradesh. 19 years of excellence with 800+ students and 35+ experienced faculty. Offering MPC, BiPC, MBiPC, MEC, and CEC courses."
-      keywords="Sai Chaitanya Junior College, Sai Chaithanya Junior College, Sai Chaitanya College Madanapalle, Sai Chaithanya College, Best Intermediate College Madanapalle, Best Intermediate College Madanapalle, Best Junior College Madanapalle, Best Junior College Madanapalle, Intermediate College Madanapalle, Intermediate College Madanapalle, Junior College Madanapalle, Junior College Madanapalle, MPC BiPC MBiPC MEC CEC, NEET Coaching Madanapalle, JEE Coaching Madanapalle, Annamayya District Junior College"
-      ogUrl="https://saichaitanyacollege.com"
+      keywords="Sai Chaitanya Junior College, Junior College in Madanapalle, Best Intermediate College in Madanapalle, Top Intermediate Junior College in Madanapalle,EAPCET coaching in Madanapalle, NEET coaching in Madanapalle, JEE coaching in Madanapalle, Intermediate college in Annamayya district, integrated coaching college AP"    
       canonical="https://saichaitanyacollege.com"
     />
 
     {/* HERO SECTION - Responsive Component Switch */}
-
     {isMobile ? (
-
       <div style={{ marginTop: '60px' }}>
-
         <MobileHeroSlider />
-
       </div>
-
     ) : (
-
       <section className="hero-strip" style={{ position: 'relative', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', marginTop: '115px', height: 'calc(100vh - 180px)', overflow: 'hidden', minHeight: '450px !important' }}>
-
         {/* Slideshow Background */}
-
         <div className="hero-slideshow" style={{ position: 'absolute', top: 0, left: 0,  width: '100%', height: '100%' }}>
-
           {slides.map((slide, index) => (
-
             <div
-
               key={index}
-
               className="slide"
-
               style={{
-
                 position: 'absolute',
-
                 top: 0,
-
                 left: 0,
-
                 width: '100%',
-
                 height: '100%',
-
                 opacity: currentSlide === index ? 1 : 0,
-
                 transition: 'opacity 1s ease-in-out',
-
                 zIndex: currentSlide === index ? 1 : 0
-
               }}
-
             >
-
               <img
-
                 src={slide.image}
-
                 alt={slide.title}
-
                 loading={index <= 1 ? "eager" : "lazy"}
-
                 style={{
-
                   width: '100%',
-
                   height: '100%',
-
                   objectFit: 'fill',
-
                   objectPosition: 'top'
-
                 }}
-
               />
-
             </div>
-
           ))}
-
         </div>
-
       </section>
-
     )}
 
 
@@ -1436,6 +1311,141 @@ export default function HomePage() {
         </div>
 
       </section>
+
+      {/* VIDEO STRIP */}
+      <section className="video-strip" style={{
+        padding: '3rem 0',
+        background: '#f3f4f6',
+        width: '100vw',
+        marginLeft: 'calc(-50vw + 50%)',
+        marginRight: 'calc(-50vw + 50%)'
+      }}>
+        <div className="strip-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0.1rem' }}>
+          <h2 className="section-heading center-text" style={{
+            ...homePageStyles.headings,
+            color: '#111827',
+            textAlign: 'center',
+            marginBottom: '1.5rem'
+          }}>
+            Watch Our Campus Tour
+          </h2>
+          <div style={{
+            position: 'relative',
+            paddingBottom: '56.25%',
+            height: 0,
+            overflow: 'hidden',
+            borderRadius: '12px',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+          }}>
+            {!showVideo ? (
+              <div
+                onClick={() => setShowVideo(true)}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  cursor: 'pointer',
+                  borderRadius: '12px',
+                  overflow: 'hidden'
+                }}
+              >
+                <img
+                  src={youtubeThumbnail}
+                  alt="Watch Our Campus Tour - Click to Play"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '80px',
+                  height: '80px',
+                  background: 'rgba(220, 38, 38, 0.9)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+                  transition: 'all 0.3s ease'
+                }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              </div>
+            ) : (
+              <iframe
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none'
+                }}
+                src="https://www.youtube.com/embed/9FS--tvUHyY?rel=0&modestbranding=1&autoplay=1"
+                title="Sai Chaitanya Junior College Intro"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
+          </div>
+
+          {/* Gallery Buttons */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '1rem',
+            marginTop: '1.5rem',
+            flexWrap: 'wrap'
+          }}>
+            <Link
+              to="/gallery"
+              onClick={() => window.scrollTo(0, 0)}
+              style={{
+                padding: '0.75rem 1.5rem',
+                background: 'linear-gradient(135deg, #dc2626, #eb7932ff)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '12px',
+                fontSize: '0.875rem',
+                fontWeight: '600',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 12px 35px rgba(220, 38, 38, 0.4)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+              }}
+            >
+             View Campus Photos
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
 
 
 

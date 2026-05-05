@@ -8,7 +8,7 @@ import mpcImage from "./assets/Academics/mpc.png";
 import bipcImage from "./assets/Academics/bipc.png";
 import cecImage from "./assets/Academics/cec.png";
 import mecImage from "./assets/Academics/mec.png";
-import hecImage from "./assets/Academics/hec.png";
+import hecImage from "./assets/Academics/mbipc.png";
 import vocationalImage from "./assets/Gallery/Campus and Classrooms/image.png";
 
 // EmailJS Configuration
@@ -474,24 +474,26 @@ const Contact = () => {
               </div>
             </div>
             <div className="eligibility-card" style={{ background: '#f8f9fa', padding: '0', borderRadius: '12px', border: '2px solid #dc262620', position: 'relative', overflow: 'hidden', height: '200px' }}>
-              <img src={cecImage} alt="CEC Course Eligibility - Sai Chaitanya Junior College Madanapalle" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: '0', left: '0' }} />
+              <img src={hecImage} alt="MBiPC Course Eligibility - Sai Chaitanya Junior College Madanapalle" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: '0', left: '0' }} />
               <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.4)' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>CEC</h3>
-                <p style={{ fontSize: '0.875rem', color: 'white', lineHeight: '1.4', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', padding: '0 1rem' }}>Min 55% in Class 10th • Age: 15-17 years</p>
+                <h3 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>MBiPC</h3>
+                <p style={{ fontSize: '0.875rem', color: 'white', lineHeight: '1.4', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', padding: '0 1rem' }}>Min 60% in Class 10th • Age: 15-17 years</p>
               </div>
             </div>
+           
             <div className="eligibility-card" style={{ background: '#f8f9fa', padding: '0', borderRadius: '12px', border: '2px solid #dc262620', position: 'relative', overflow: 'hidden', height: '200px' }}>
               <img src={mecImage} alt="MEC Course Eligibility - Sai Chaitanya Junior College Madanapalle" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: '0', left: '0' }} />
               <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.4)' }}>
                 <h3 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>MEC</h3>
-                <p style={{ fontSize: '0.875rem', color: 'white', lineHeight: '1.4', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', padding: '0 1rem' }}>Min 55% in Class 10th • Age: 15-17 years</p>
+                <p style={{ fontSize: '0.875rem', color: 'white', lineHeight: '1.4', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', padding: '0 1rem' }}>Min 60% in Class 10th • Age: 15-17 years</p>
               </div>
             </div>
+            
             <div className="eligibility-card" style={{ background: '#f8f9fa', padding: '0', borderRadius: '12px', border: '2px solid #dc262620', position: 'relative', overflow: 'hidden', height: '200px' }}>
-              <img src={hecImage} alt="HEC Course Eligibility - Sai Chaitanya Junior College Madanapalle" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: '0', left: '0' }} />
+              <img src={cecImage} alt="CEC Course Eligibility - Sai Chaitanya Junior College Madanapalle" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: '0', left: '0' }} />
               <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'rgba(0,0,0,0.4)' }}>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>HEC</h3>
-                <p style={{ fontSize: '0.875rem', color: 'white', lineHeight: '1.4', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', padding: '0 1rem' }}>Min 50% in Class 10th • Age: 15-17 years</p>
+                <h3 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>CEC</h3>
+                <p style={{ fontSize: '0.875rem', color: 'white', lineHeight: '1.4', textShadow: '1px 1px 2px rgba(0,0,0,0.8)', textAlign: 'center', padding: '0 1rem' }}>Min 55% in Class 10th • Age: 15-17 years</p>
               </div>
             </div>
             <div className="eligibility-card" style={{ background: '#f8f9fa', padding: '0', borderRadius: '12px', border: '2px solid #dc262620', position: 'relative', overflow: 'hidden', height: '200px', opacity: '0.8' }}>
