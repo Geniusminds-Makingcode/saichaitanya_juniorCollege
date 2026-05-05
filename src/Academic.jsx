@@ -13,6 +13,11 @@ import image1 from "./assets/Heroic/image1.png";
 
 
 import teachingImage1 from "./assets/Photos/Teaching Methdodolgy/image.png";
+import eapcetImage from "./assets/Photos/Coaching/eapcet.png";
+import neetImage from "./assets/Photos/Coaching/neet.png";
+import cacptImage from "./assets/Photos/Coaching/cacpt.png";
+import jee from "./assets/Photos/Coaching/jee.png";
+
 
 import SEO from "./components/SEO";
 // Dynamic image loading for Academic courses
@@ -115,7 +120,7 @@ export default function Academic() {
 
       title: "MPC",
 
-      subtitle: "Mathematics, Physics, Chemistry",
+      subtitle: "Mathematics, Physics, Chemistry (EAPCET, JEE Coaching)",
 
       description: "Ideal for students aiming for Engineering, IIT-JEE, Architecture, and pure sciences. Strong focus on problem-solving and competitive exam preparation.",
 
@@ -135,7 +140,7 @@ export default function Academic() {
 
       title: "BiPC",
 
-      subtitle: "Biology, Physics, Chemistry",
+      subtitle: "Biology, Physics, Chemistry (NEET Coaching)",
 
       description: "Perfect for aspiring medical professionals – prepares for NEET, EAMCET (Medical), Biotechnology, Pharmacy, and allied health sciences.",
 
@@ -148,26 +153,6 @@ export default function Academic() {
       color: "#dc2626",
 
       backgroundImage: getCourseImage("BiPC")
-
-    },
-
-    {
-
-      title: "MBiPC",
-
-      subtitle: "Mathematics, Biology, Physics, Chemistry",
-
-      description: "A unique combination of Maths and Biology, ideal for students interested in both engineering and medical-related fields. Suitable for careers in Biotechnology, Bioinformatics, Pharmacy, Agriculture, and interdisciplinary sciences.",
-
-      medium: "English / Telugu Medium",
-
-      strength: "Available sections",
-
-      features: ["Biotechnology Foundation", "Analytical Thinking", "Lab & Research Skills"],
-
-      color: "#dc2626",
-
-      backgroundImage: getCourseImage("MBIPC")
 
     },
 
@@ -234,9 +219,9 @@ export default function Academic() {
     <div className="academic-container">
 
       <SEO
-        title="Academics"
-        description="Sai Chaitanya Junior College offers MPC, BiPC, MBiPC, MEC, and CEC courses with NEET, JEE, and IPMAT coaching. Experienced faculty, advanced labs, and proven teaching methodologies in Madanapalle, AP."
-        keywords="MPC BiPC MEC CEC,EAPCET, Intermediate Courses, NEET Coaching, JEE Coaching, IPMAT Preparation, Madanapalle Junior College, Best Intermediate College AP,Best Intermediate College In Madanapalle"
+        title="Best EAPCET, NEET & JEE Coaching Center in Madanapalle | Academics"
+        description="Join the best EAPCET, NEET & JEE coaching center in Madanapalle. Sai Chaitanya Junior College offers MPC, BiPC, MBiPC, MEC, CEC courses with expert faculty, proven results, and comprehensive entrance exam preparation."
+        keywords="Best EAPCET coaching center in Madanapalle, Best NEET coaching center in Madanapalle, Best JEE mains coaching center in Madanapalle, Best JEE coaching Madanapalle, best CA CPT coaching Madanapalle, EAPCET coaching Madanapalle, NEET coaching center Madanapalle, JEE coaching institute Madanapalle, MPC BiPC MEC CEC, Intermediate courses, best junior college Madanapalle, coaching centers in Madanapalle, entrance exam coaching, engineering coaching Madanapalle, medical coaching Madanapalle, IPMAT coaching Madanapalle, Annamayya district coaching, best intermediate college AP"
         ogUrl="https://saichaitanyacollege.com/academics"
         canonical="https://saichaitanyacollege.com/academics"
       />
@@ -696,7 +681,7 @@ export default function Academic() {
             </h2>
           </div>
           <p style={{ ...homePageStyles.body, fontSize: '0.875rem', color: '#6b7280', width: '100%', textAlign: 'center', margin: '0 0 3rem 0', lineHeight: '1.6' }}>
-            Intensive entrance exam coaching for Intermediate completed students - EAPCET, JEE & NEET Preparation
+            Intensive entrance exam coaching for Intermediate completed students - EAPCET, JEE, NEET & CA-CPT Preparation
           </p>
         </div>
 
@@ -715,16 +700,16 @@ export default function Academic() {
             eligibility: "MPC / MBiPC Completed",
             features: ["4-Week Program", "Daily Tests", "Doubt Clearing"],
             color: "#dc2626",
-            backgroundImage: groupsOffered[0]?.backgroundImage
+            backgroundImage: eapcetImage
           },
           {
             title: "JEE",
-            subtitle: "IIT-JEE Foundation Course", 
+            subtitle: "IIT-JEE Foundation Course",
             description: "Foundation course for IIT-JEE aspirants. Advanced Mathematics, Physics, Chemistry concepts with shortcut methods and MCQ practice for top engineering colleges.",
             eligibility: "MPC / MBiPC Completed",
             features: ["3-Week Program", "MCQ Practice", "Shortcut Methods"],
             color: "#dc2626",
-            backgroundImage: groupsOffered[0]?.backgroundImage
+            backgroundImage: jee
           },
           {
             title: "NEET",
@@ -733,7 +718,16 @@ export default function Academic() {
             eligibility: "BiPC / MBiPC Completed",
             features: ["3-Week Program", "NCERT Focus", "Mock Tests"],
             color: "#dc2626",
-            backgroundImage: groupsOffered[1]?.backgroundImage
+            backgroundImage: neetImage
+          },
+          {
+            title: "CA-CPT",
+            subtitle: "Chartered Accountant Foundation",
+            description: "Foundation course for CA aspirants covering Accounting, Mercantile Law, General Economics, and Quantitative Aptitude. Comprehensive preparation for CA Foundation entrance exam.",
+            eligibility: "CEC / MEC / Any Group Completed",
+            features: ["4-Week Program", "Accounting Focus", "Mock Exams"],
+            color: "#dc2626",
+            backgroundImage: cacptImage
           }].map((course, index) => (
             <div key={index}
               className="summer-card"
@@ -801,9 +795,9 @@ export default function Academic() {
                   flexDirection: 'column',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  background: 'rgba(0,0,0,0.4)'
+                  background: 'rgba(85, 84, 84, 0.4)'
                 }}>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>{course.title}</h3>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem', color: 'white' }}></h3>
                 </div>
               </div>
 
@@ -880,7 +874,7 @@ export default function Academic() {
               e.target.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
             }}
           >
-            Register Now
+            Enquire Now
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
             </svg>
