@@ -34,7 +34,7 @@ export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const [statsAnimated, setStatsAnimated] = useState(false);
-  const [statCounts, setStatCounts] = useState({ years: 19, students: 800, faculty: 35, success: 100 });
+  const [statCounts, setStatCounts] = useState({ years: 19, students: 528, faculty: 35, success: 100 });
   const [tickerPosition, setTickerPosition] = useState(0);
   const [showVideo, setShowVideo] = useState(false);
   const { isMobile, isTablet, isDesktop } = useResponsive();
@@ -230,7 +230,7 @@ export default function HomePage() {
 
   const animateStats = () => {
 
-    const targets = { years: 19, students: 800, faculty: 35, success: 100 };
+    const targets = { years: 19, students: 528, faculty: 35, success: 100 };
 
     const duration = 2000;
 
